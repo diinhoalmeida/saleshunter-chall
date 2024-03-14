@@ -30,7 +30,7 @@
 import CollapsibleTable from '../components/CollapsibleTable.vue'
 
 export default {
-  name: "HomeView",
+  name: 'HomeView',
   components: {
     CollapsibleTable
   }
@@ -113,12 +113,5 @@ export default {
   color: #ffffff;
   justify-content: center;
   align-items: center;
-}
-
-@media (max-width: 1280px) {
-  .footer_div {
-    width: 90vw;
-  
-}
 }
 </style>
