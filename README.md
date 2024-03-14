@@ -1,10 +1,10 @@
-# Documentação - SalesHunter Challenger
+# Documentação - SalesHunter Challenge
 
-Bem-vindo à documentação do site do SalesHunter Challenger. Nesta documentação, você encontrará informações detalhadas sobre o funcionamento e recursos do website, bem como as tecnologias utilizadas no desenvolvimento.
+Bem-vindo à documentação do site do SalesHunter Challenge. Nesta documentação, você encontrará informações detalhadas sobre o funcionamento e recursos do website, bem como as tecnologias utilizadas no desenvolvimento.
 
 ## Visão Geral
 
-O site de SalesHunter Challenger permite que os usuários pesquisem por pesquisas realizadas pelo IBGE, selecionando uma quantidade e também datas para melhorar a visualização dos itens;
+O site de SalesHunter Challenge permite que os usuários pesquisem por pesquisas realizadas pelo IBGE, selecionando uma quantidade e também datas para melhorar a visualização dos itens;
 
 ### Funcionalidades Principais
 
