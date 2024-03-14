@@ -4,7 +4,7 @@ Bem-vindo à documentação do site do SalesHunter Challenge. Nesta documentaç�
 
 ## Visão Geral
 
-O site de SalesHunter Challenge permite que os usuários pesquisem por pesquisas realizadas pelo IBGE, selecionando uma quantidade e também datas para melhorar a visualização dos itens;
+O site de SalesHunter Challenge permite que os usuários busquem por pesquisas realizadas pelo IBGE, selecionando uma quantidade e também datas para melhorar a visualização dos itens;
 
 ### Funcionalidades Principais
 
