@@ -113,21 +113,20 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo com opacidade */
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Z-index alto para garantir que fique acima de todo o conteúdo */
+  z-index: 9999;
 }
 
-/* Estilos do spinner de carregamento */
 .loading-spinner {
-  border: 8px solid #f3f3f3; /* Cor do spinner */
-  border-top: 8px solid #3498db; /* Cor do spinner */
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  animation: spin 1s linear infinite; /* Animação de rotação */
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
