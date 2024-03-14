@@ -11,8 +11,6 @@ html {
 
 body {
   overflow-x: hidden;
-  padding-left: 10px;
-  padding-right: 20px
 }
 
 :focus {
