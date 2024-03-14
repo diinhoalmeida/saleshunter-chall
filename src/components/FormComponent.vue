@@ -34,6 +34,11 @@ export default {
         return
       }
 
+      if (this.startDate > this.endDate && this.endDate) {
+        alert('A data inicial deve ser menor que a data final!')
+        return
+      }
+
       const url = `https://servicodados.ibge.gov.br/api/v3/calendario/?qtd=${this.qtd}&de=${this.startDate}&ate=${this.endDate}`
       try {
         const response = await axios.get(url)
