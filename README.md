@@ -1,45 +1,55 @@
-# sales-hunter-chall
+# Documentação - SalesHunter Challenger
 
-This template should help get you started developing with Vue 3 in Vite.
+Bem-vindo à documentação do site do SalesHunter Challenger. Nesta documentação, você encontrará informações detalhadas sobre o funcionamento e recursos do website, bem como as tecnologias utilizadas no desenvolvimento.
 
-## Recommended IDE Setup
+## Visão Geral
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+O site de SalesHunter Challenger permite que os usuários pesquisem por pesquisas realizadas pelo IBGE, selecionando uma quantidade e também datas para melhorar a visualização dos itens;
 
-## Type Support for `.vue` Imports in TS
+### Funcionalidades Principais
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+1. **Filtro de Pesquisa:** O usuário pode utilizar os campos de pesquisa que incluem quantidade, data inicial e data final.
 
-## Customize configuration
+2. **Listagem Responsiva:** O usuário conta com uma listagem clara e responsiva, feita de forma nativa, contém todos os itens buscados.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+3. **Detalhes da Pesquisa:** O usuário pode clicar em um dos itens da lista e irá se deparar com os detalhes oferecidos pelo IBGE referente àquela pesquisa;
 
-## Project Setup
+## Tecnologias Utilizadas
 
-```sh
+- Vue
+- Axios: Uma biblioteca para fazer requisições HTTP.
+- Eslint
+- Prettier
+- TypeScript
+- Vue Router
+
+## Instalação
+
+1. Clone o repositório em sua máquina local.
+2. Navegue até o diretório do projeto e instale as dependências usando npm.
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+3. Execute o servidor de desenvolvimento.
 
-```sh
+```bash
 npm run dev
 ```
+O site estará disponível em `http://localhost:5173`.
 
-### Type-Check, Compile and Minify for Production
+## Contribuição
 
-```sh
-npm run build
-```
+Se encontrar algum problema ou tiver sugestões de melhoria, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Contato
 
-```sh
-npm run test:unit
-```
+Para qualquer dúvida ou oportunidade de colaboração, você pode entrar em contato através dos seguintes canais:
 
-### Lint with [ESLint](https://eslint.org/)
+- E-mail: edifilho1409@outlook.com
+- LinkedIn: https://www.linkedin.com/in/edilson-almeida-2684a620a/
+- GitHub: https://github.com/diinhoalmeida
+- Portfolio: https://portfolio-project-chi-six.vercel.app/
 
-```sh
-npm run lint
-```
+Obrigado por utilizar o site! Esperamos que você tenha uma experiência agradável e útil.
