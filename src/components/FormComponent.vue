@@ -24,7 +24,7 @@ export default {
   },
   computed: {
     formattedStartDate() {
-      return this.startDate.slice(0, 10); // Formatando a data para o formato 'YYYY-MM-DD' para ser aceita pelo input type="date"
+      return this.startDate.slice(0, 10) // Formatando a data para o formato 'YYYY-MM-DD' para ser aceita pelo input type="date"
     }
   },
   methods: {
@@ -37,10 +37,9 @@ export default {
       const url = `https://servicodados.ibge.gov.br/api/v3/calendario/?qtd=${this.qtd}&de=${this.startDate}&ate=${this.endDate}`
       try {
         const response = await axios.get(url)
-        console.log(response.data.items);
         this.$emit('data-fetched', response.data.items)
       } catch (error) {
-        console.error('Erro ao buscar dados:', error)
+        alert('Erro ao buscar dados!')
       }
     }
   }
