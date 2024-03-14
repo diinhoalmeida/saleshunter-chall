@@ -39,7 +39,10 @@ export default {
         return
       }
 
-      const url = `https://servicodados.ibge.gov.br/api/v3/calendario/?qtd=${this.qtd}&de=${this.startDate}&ate=${this.endDate}`
+      const formattedStartDate = this.startDate.slice(0, 10)
+      const formattedEndDate = this.endDate ? this.endDate.slice(0, 10) : ''
+
+      const url = `https://servicodados.ibge.gov.br/api/v3/calendario/?qtd=${this.qtd}&de=${formattedStartDate}&ate=${formattedEndDate}`
       try {
         const response = await axios.get(url)
         this.$emit('data-fetched', response.data.items)
