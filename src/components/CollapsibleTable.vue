@@ -73,4 +73,10 @@ export default {
   flex-direction: column;
   gap: 30px;
 }
+
+@media (max-width: 1280px) {
+  .collapsible-table-container {
+    width: 90vw;
+  }
+}
 </style>

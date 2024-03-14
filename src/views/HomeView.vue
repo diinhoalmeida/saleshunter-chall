@@ -114,4 +114,10 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 1280px) {
+  footer {
+    width: 90vw;
+  }
+}
 </style>
