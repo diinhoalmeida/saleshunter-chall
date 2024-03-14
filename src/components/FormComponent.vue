@@ -6,8 +6,12 @@
     <input type="date" id="startDate" v-model="startDate" />
     <label for="endDate">Data máxima de divulgação:</label>
     <input type="date" id="endDate" v-model="endDate" />
-    <button type="submit">Buscar</button>
+    <button :disabled="loading" type="submit">Buscar</button>
   </form>
+
+  <div class="loading-overlay" v-if="loading">
+    <div class="loading-spinner"></div>
+  </div>
 </template>
 
 <script>
@@ -19,7 +23,8 @@ export default {
     return {
       qtd: 5,
       startDate: new Date('2020-01-01').toISOString().slice(0, 10), // Convertendo para o formato ISO e pegando apenas a parte da data
-      endDate: ''
+      endDate: '',
+      loading: false
     }
   },
   computed: {
@@ -29,13 +34,16 @@ export default {
   },
   methods: {
     async fetchData() {
+      this.loading = true
       if (this.qtd < 1 || this.qtd > 25) {
         alert('A quantidade de itens por página deve estar entre 1 e 25.')
+        this.loading = false
         return
       }
 
       if (this.startDate > this.endDate && this.endDate) {
         alert('A data inicial deve ser menor que a data final!')
+        this.loading = false
         return
       }
 
@@ -46,7 +54,9 @@ export default {
       try {
         const response = await axios.get(url)
         this.$emit('data-fetched', response.data.items)
+        this.loading = false
       } catch (error) {
+        this.loading = false
         alert('Erro ao buscar dados!')
       }
     }
@@ -95,5 +105,37 @@ button:hover {
     0 0 0 0 #fff,
     0 0 0 3px #efeeea;
   transform: scale(1);
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo com opacidade */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Z-index alto para garantir que fique acima de todo o conteúdo */
+}
+
+/* Estilos do spinner de carregamento */
+.loading-spinner {
+  border: 8px solid #f3f3f3; /* Cor do spinner */
+  border-top: 8px solid #3498db; /* Cor do spinner */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Animação de rotação */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 </style>
